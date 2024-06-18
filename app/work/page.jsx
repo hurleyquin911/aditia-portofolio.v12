@@ -163,12 +163,6 @@ const Work = () => {
                       <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                       {/*Bagian Image*/}
                       <div className=" relative w-full h-full">
-                        <img
-                          src={project.image}
-                          fill
-                          className="object-cover"
-                          alt=""
-                        />
                       </div>
                     </div>
                   </SwiperSlide>
