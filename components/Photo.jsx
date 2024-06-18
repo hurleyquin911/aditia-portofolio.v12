@@ -22,16 +22,7 @@ const Photo = () => {
             transition: { delay: 2.4, duration: 1.8, ease: "easeInOut" },
           }}
           className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
-        >
-          <img
-            src="./assets/photo.png"
-            priority
-            quality={100}
-            fill
-            alt=""
-            className="object-contain"
-          />
-        </motion.div>
+        ></motion.div>
 
         {/* Bagian Lingkaran */}
         <motion.svg
@@ -55,6 +46,25 @@ const Photo = () => {
             }}
             transition={{
               duration: 20,
+              repeat: Infinity,
+              repeatType: "reverse",
+            }}
+          />
+          <motion.circle
+            cx="223"
+            cy="223"
+            r="220"
+            stroke="#00ff99"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            initial={{ strokeDasharray: "24 10 0 0" }}
+            animate={{
+              strokeDasharray: ["15 120 25 15", "16 25 92 72", "4 250 22 22"],
+              rotate: [120, 360],
+            }}
+            transition={{
+              duration: 10,
               repeat: Infinity,
               repeatType: "reverse",
             }}
