@@ -6,6 +6,18 @@ import Link from "next/link";
 
 import { motion } from "framer-motion";
 
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
+
 const services = [
   {
     num: "01",
@@ -73,7 +85,26 @@ const page = () => {
                 group-hover:bg-accent transition-all duration-500 
                 flex justify-center items-center hover:-rotate-45"
                   >
-                    <BsArrowDownRight className="text-primary text-3xl" />
+                    <AlertDialog>
+                      <AlertDialogTrigger>
+                        <BsArrowDownRight className="text-primary text-3xl" />
+                      </AlertDialogTrigger>
+                      <AlertDialogContent>
+                        <AlertDialogHeader>
+                          <AlertDialogTitle>
+                            Are you absolutely sure?
+                          </AlertDialogTitle>
+                          <AlertDialogDescription>
+                            This action cannot be undone. This will permanently
+                            delete your account and remove your data from our
+                            servers.
+                          </AlertDialogDescription>
+                        </AlertDialogHeader>
+                        <AlertDialogFooter>
+                          <AlertDialogCancel>Kembali</AlertDialogCancel>
+                        </AlertDialogFooter>
+                      </AlertDialogContent>
+                    </AlertDialog>
                   </Link>
                 </div>
                 {/*Title*/}
@@ -91,6 +122,7 @@ const page = () => {
             );
           })}
         </motion.div>
+        <div></div>
       </div>
     </section>
   );
