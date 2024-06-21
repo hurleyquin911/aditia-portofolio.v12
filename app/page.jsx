@@ -15,14 +15,16 @@ export default function Home() {
         >
           {/*bagian teks*/}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Website Developer</span>
+            <span className="text-xl">
+              Website Developer,UI/UX,Data-Science
+            </span>
             <h1 className="h1">
               Hello I&apos;m <br />{" "}
               <span className="text-accent">AditiaNur Lukman</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Repudiandae, ipsum saepe excepturi laudantium hic mollitia
+              Saya menawarkan layanan lengkap di bidang Web Development, data
+              science, SEO, dan UI/UX dengan mengikuti kemajuan teknologi
             </p>
             {/*Tombol sosial media*/}
             <div className="flex flex-col xl:flex-row items-center gap-8">

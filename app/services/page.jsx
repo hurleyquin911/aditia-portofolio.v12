@@ -17,34 +17,43 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
+import { Button } from "@/components/ui/button";
 
 const services = [
   {
     num: "01",
     title: "Web Development",
     description:
-      "Saya siap untuk membangun situs web yang cepat, responsif, dan menarik untuk meningkatkan kehadiran online Anda",
+      "Menyediakan layanan pembuatan dan pengembangan situs web yang responsif dan fungsional. Saya memastikan situs web Anda aman, cepat, dan sesuai dengan kebutuhan bisnis.",
+    description_full:
+      "Saya menawarkan pembuatan dan pengembangan situs web yang profesional dan fungsional. Dengan menciptakan situs web yang responsif, aman, dan sesuai dengan kebutuhan bisnis Anda. Mulai dari website perusahaan, e-commerce, hingga aplikasi web khusus, saya siap membantu Anda menghadirkan pengalaman online yang terbaik untuk pengguna Anda. Kami juga menyediakan layanan pemeliharaan dan pembaruan rutin untuk memastikan situs web Anda selalu dalam kondisi optimal.",
     href: "",
   },
   {
     num: "02",
     title: "UI/UX",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad assumenda maiores ab cumque minus esse nulla. Sunt.",
+      "Layanan UI/UX berfokus pada desain antarmuka yang menarik dan pengalaman pengguna yang intuitif",
+    description_full:
+      "UI/UX saya akan fokus pada menciptakan antarmuka pengguna (UI) yang menarik dan pengalaman pengguna (UX) yang intuitif dan memuaskan. Saya memahami bahwa desain yang baik bukan hanya tentang estetika, tetapi juga tentang bagaimana pengguna berinteraksi dengan produk digital Anda. Saya juga melakukan penelitian mendalam, wireframing, prototyping, dan uji kegunaan untuk memastikan setiap elemen desain berfungsi dengan baik dan memenuhi kebutuhan pengguna.",
     href: "",
   },
   {
     num: "03",
     title: "Data Science",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad assumenda maiores ab cumque minus esse nulla. Sunt.",
+      "Saya dapat membantu bisnis anda dengan memanfaatkan data untuk pengambilan keputusan yang lebih baik.",
+    description_full:
+      "Saya membantu bisnis Anda dengan memanfaatkan kekuatan data untuk pengambilan keputusan yang lebih baik. Saya akan menyediakan solusi analisis data yang komprehensif, mulai dari pengumpulan dan pengolahan data, analitik prediktif, hingga visualisasi data. Dengan menggunakan teknik machine learning dan algoritma canggih, Saya akan membantu Anda mengidentifikasi pola, tren, dan wawasan berharga dari data Anda untuk mendorong inovasi dan efisiensi operasional.",
     href: "",
   },
   {
     num: "04",
     title: "SEO",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad assumenda maiores ab cumque minus esse nulla. Sunt.",
+      "Saya memberikan Layanan SEO yang dirancang untuk meningkatkan visibilitas situs web Anda di mesin pencari.",
+    description_full:
+      "(Search Engine Optimization) Saya dirancang untuk meningkatkan visibilitas situs web Anda di mesin pencari seperti Google. Saya menggunakan teknik SEO terkini untuk membantu situs web Anda mendapatkan peringkat yang lebih tinggi dalam hasil pencarian, sehingga meningkatkan trafik organik dan potensi konversi. Mulai dari penelitian kata kunci, optimasi konten, hingga pembangunan tautan, saya soap membantu anda mencapai tujuan digital yang Efektif dan Inovativ",
     href: "",
   },
 ];
@@ -91,17 +100,16 @@ const page = () => {
                       </AlertDialogTrigger>
                       <AlertDialogContent>
                         <AlertDialogHeader>
-                          <AlertDialogTitle>
-                            Are you absolutely sure?
-                          </AlertDialogTitle>
+                          <AlertDialogTitle>{services.title}</AlertDialogTitle>
                           <AlertDialogDescription>
-                            This action cannot be undone. This will permanently
-                            delete your account and remove your data from our
-                            servers.
+                            {services.description_full}
                           </AlertDialogDescription>
                         </AlertDialogHeader>
                         <AlertDialogFooter>
                           <AlertDialogCancel>Kembali</AlertDialogCancel>
+                          <Link href="/contact">
+                            <Button>Hire Me</Button>
+                          </Link>
                         </AlertDialogFooter>
                       </AlertDialogContent>
                     </AlertDialog>
